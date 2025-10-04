@@ -11,7 +11,7 @@ Gaeinity Community Suite is a multipurpose community plugin that brings together
 ## Getting Started
 
 1. Upload the `gaenity-community` folder to your WordPress installation's `/wp-content/plugins/` directory or install it as a zip via **Plugins → Add New → Upload Plugin**.
-2. Activate **Gaeinity Community Suite**. During activation the plugin now seeds five example resources, five example discussions, featured experts, live chat history, and publishes a "Gaeinity Community" landing page populated with the core shortcodes. It also provisions representative member and expert accounts so you can see profile data in context. All demo content can be edited or removed like any other WordPress item.
+2. Activate **Gaeinity Community Suite**. During activation the plugin seeds three example resources, two example discussions, and publishes a "Gaeinity Community" landing page populated with the core shortcodes. All demo content can be edited or removed like any other WordPress post.
 3. Visit **Pages → Gaeinity Community** to review the starter layout. Edit it in the Block Editor, Classic Editor, or Elementor by swapping shortcodes, removing sections, or adding your own content.
 4. Add additional pages or templates using the shortcodes below to embed specific sections anywhere on your site.
 
@@ -21,7 +21,7 @@ The plugin registers a router shortcode and individual helpers for each feature.
 
 | Shortcode | Purpose |
 | --- | --- |
-| `[gaenity_community block="community_home"]` or `[gaenity_community_home]` | Intro hero with key calls-to-action and feature highlights. |
+| `[gaenity_community block="community_home"]` | Intro hero with key calls-to-action and feature highlights. |
 | `[gaenity_community block="resources"]` or `[gaenity_resources]` | Resource grid with download modal. |
 | `[gaenity_community block="register"]` or `[gaenity_register]` | Community registration form. |
 | `[gaenity_community block="login"]` or `[gaenity_login]` | Lightweight login form that respects WordPress authentication. |
@@ -41,7 +41,7 @@ The plugin adds a **Gaeinity Community Block** Elementor widget located under th
 
 ## Theme Styling
 
-Front-end CSS focuses on a refined layout system (cards, highlight grids, modern form styling) while still inheriting the active theme for typography and primary colours. Buttons, headings, and form controls therefore feel native to your site with minimal overrides. If you need to adjust colours or spacing further, enqueue your own stylesheet and target the `.gaenity-*` class names.
+Front-end CSS focuses on spacing and layout only. All typography inherits the active theme, so headings, buttons, and form controls automatically match global styles. If you need to override colours or spacing further, enqueue your own stylesheet and target the `.gaenity-*` class names.
 
 ## Forms and Data
 
@@ -54,12 +54,6 @@ All forms submit via WordPress' `admin-post.php` endpoint and create private ent
 - **Seed content keeps reappearing**: Remove the `gaenity_community_seeded` option from **Tools → Site Health → Debug** or via `wp option delete gaenity_community_seeded` if you want the demo content to be generated again.
 
 ## Changelog
-
-### 2.2.0
-- Refined the entire front-end to use a responsive card-based system that inherits the active theme while presenting a polished, professional UI.
-- Added dedicated helper shortcodes (`[gaenity_register]`, `[gaenity_chat]`, etc.) in addition to the router, ensuring legacy PHP compatibility and predictable rendering inside Elementor.
-- Seeded five resources, discussions, experts, chat history, and demo user accounts on activation for immediate onboarding context.
-- Hardened Elementor widget registration across legacy hooks to resolve editor 500 errors and ensure single instantiation per request.
 
 ### 2.1.0
 - Added activation seeding for resources, discussions, and a starter landing page.
