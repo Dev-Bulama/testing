@@ -1,0 +1,464 @@
+:root {
+    --gaenity-space-xs: clamp(0.5rem, 1vw, 0.75rem);
+    --gaenity-space-sm: clamp(0.75rem, 1.25vw, 1rem);
+    --gaenity-space-md: clamp(1.25rem, 2vw, 1.75rem);
+    --gaenity-space-lg: clamp(2rem, 4vw, 3rem);
+    --gaenity-radius-sm: 0.75rem;
+    --gaenity-radius-md: 1.25rem;
+    --gaenity-shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.08);
+    --gaenity-border-color: color-mix(in srgb, currentColor 12%, transparent);
+    --gaenity-muted: color-mix(in srgb, currentColor 60%, transparent);
+    --gaenity-max-width: min(1100px, 92vw);
+}
+
+.gaenity-section,
+.gaenity-section__header,
+.gaenity-button,
+.gaenity-card,
+.gaenity-grid,
+.gaenity-form,
+.gaenity-modal,
+.gaenity-modal__dialog,
+.gaenity-chat,
+.gaenity-chat__list,
+.gaenity-inline-list,
+.gaenity-list,
+.gaenity-list__item,
+.gaenity-steps,
+.gaenity-contact-footer,
+.gaenity-expert-list,
+.gaenity-pill,
+.gaenity-highlight-grid {
+    /* legacy selector kept for backward compatibility */
+}
+
+.gaenity-section {
+    display: block;
+}
+
+.gaenity-section__header,
+.gaenity-section__title {
+    display: block;
+}
+
+.gaenity-button {
+    display: inline-flex;
+}
+
+/* Corrected namespace rules below */
+
+.gaenity-section,
+.gaenity-section__header,
+.gaenity-button,
+.gaenity-card,
+.gaenity-grid,
+.gaenity-form,
+.gaenity-modal,
+.gaenity-modal__dialog,
+.gaenity-chat,
+.gaenity-chat__list,
+.gaenity-inline-list,
+.gaenity-list,
+.gaenity-list__item,
+.gaenity-steps,
+.gaenity-contact-footer,
+.gaenity-expert-list,
+.gaenity-pill,
+.gaenity-highlight-grid {
+    /* reset placeholder */
+}
+
+.gaenity-section {
+    margin: 0 0 var(--gaenity-space-lg);
+    padding: var(--gaenity-space-lg) clamp(1.25rem, 2vw, 2rem);
+    border: 1px solid var(--gaenity-border-color);
+    border-radius: var(--gaenity-radius-md);
+    box-shadow: var(--gaenity-shadow-sm);
+    background: rgba(255, 255, 255, 0.92);
+    background: color-mix(in srgb, currentColor 3%, transparent);
+    width: var(--gaenity-max-width);
+    max-width: 100%;
+    margin-inline: auto;
+    display: grid;
+    gap: var(--gaenity-space-md);
+}
+
+.gaenity-section--hero {
+    position: relative;
+    overflow: hidden;
+    color: inherit;
+}
+
+.gaenity-section--hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, color-mix(in srgb, currentColor 12%, transparent) 0%, transparent 60%);
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.gaenity-section--hero > * {
+    position: relative;
+}
+
+.gaenity-section__header {
+    display: grid;
+    gap: var(--gaenity-space-sm);
+    max-width: 70ch;
+}
+
+.gaenity-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--gaenity-muted);
+    margin: 0;
+}
+
+.gaenity-section__title {
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.gaenity-section__lede {
+    font-size: clamp(1rem, 1.3vw, 1.125rem);
+    margin: 0;
+    color: var(--gaenity-muted);
+}
+
+.gaenity-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gaenity-space-sm);
+}
+
+.gaenity-button {
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    background: currentColor;
+    color: color-mix(in srgb, currentColor 12%, white 88%);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    cursor: pointer;
+}
+
+.gaenity-button:hover,
+.gaenity-button:focus {
+    opacity: 0.92;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+}
+
+.gaenity-button--outline {
+    background: transparent;
+    color: inherit;
+}
+
+.gaenity-button--ghost {
+    background: transparent;
+    color: inherit;
+    border-radius: var(--gaenity-radius-sm);
+}
+
+.gaenity-grid,
+.gaenity-highlight-grid {
+    display: grid;
+    gap: var(--gaenity-space-md);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gaenity-highlight-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.gaenity-card {
+    padding: var(--gaenity-space-md);
+    border-radius: var(--gaenity-radius-sm);
+    border: 1px solid var(--gaenity-border-color);
+    background: rgba(255, 255, 255, 0.88);
+    background: color-mix(in srgb, currentColor 6%, transparent);
+    display: grid;
+    gap: var(--gaenity-space-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gaenity-card:hover,
+.gaenity-card:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+}
+
+.gaenity-card__image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: calc(var(--gaenity-radius-sm) - 0.25rem);
+}
+
+.gaenity-card__title {
+    margin: 0;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+.gaenity-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--gaenity-muted);
+}
+
+.gaenity-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, currentColor 12%, transparent);
+    font-size: 0.8rem;
+}
+
+.gaenity-filter-bar {
+    display: flex;
+    gap: var(--gaenity-space-sm);
+    flex-wrap: wrap;
+}
+
+.gaenity-form {
+    display: grid;
+    gap: var(--gaenity-space-sm);
+}
+
+.gaenity-form label {
+    display: grid;
+    gap: 0.4rem;
+    font-weight: 600;
+}
+
+.gaenity-form input,
+.gaenity-form select,
+.gaenity-form textarea {
+    width: 100%;
+    border-radius: var(--gaenity-radius-sm);
+    border: 1px solid var(--gaenity-border-color);
+    padding: 0.7rem 0.9rem;
+    font: inherit;
+    color: inherit;
+    background: color-mix(in srgb, white 92%, transparent 8%);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gaenity-form input:focus,
+.gaenity-form select:focus,
+.gaenity-form textarea:focus {
+    border-color: currentColor;
+    box-shadow: 0 0 0 3px color-mix(in srgb, currentColor 25%, transparent 75%);
+    outline: none;
+}
+
+.gaenity-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.gaenity-checkbox,
+.gaenity-radio {
+    display: inline-flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    font-weight: 400;
+}
+
+.gaenity-checkbox input,
+.gaenity-radio input {
+    margin-top: 0.25rem;
+}
+
+.gaenity-list {
+    display: grid;
+    gap: var(--gaenity-space-sm);
+}
+
+.gaenity-list__item {
+    padding: var(--gaenity-space-sm);
+    border-radius: calc(var(--gaenity-radius-sm) - 0.2rem);
+    border: 1px solid var(--gaenity-border-color);
+    background: rgba(255, 255, 255, 0.88);
+    background: color-mix(in srgb, currentColor 4%, transparent);
+    display: grid;
+    gap: 0.3rem;
+}
+
+.gaenity-list__title {
+    margin: 0;
+}
+
+.gaenity-list__title a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.gaenity-list__meta {
+    font-size: 0.85rem;
+    color: var(--gaenity-muted);
+}
+
+.gaenity-chat {
+    border-radius: var(--gaenity-radius-sm);
+    border: 1px solid var(--gaenity-border-color);
+    background: rgba(255, 255, 255, 0.88);
+    background: color-mix(in srgb, currentColor 4%, transparent);
+    max-height: 22rem;
+    overflow: auto;
+}
+
+.gaenity-chat__list {
+    list-style: none;
+    margin: 0;
+    padding: var(--gaenity-space-sm);
+    display: grid;
+    gap: var(--gaenity-space-sm);
+}
+
+.gaenity-chat__item {
+    padding-bottom: var(--gaenity-space-xs);
+    border-bottom: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+}
+
+.gaenity-chat__item:last-child {
+    border-bottom: 0;
+}
+
+.gaenity-chat__meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--gaenity-muted);
+}
+
+.gaenity-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    display: grid;
+    place-items: center;
+    padding: var(--gaenity-space-lg);
+    z-index: 9999;
+}
+
+.gaenity-modal[hidden] {
+    display: none;
+}
+
+.gaenity-modal__dialog {
+    background: inherit;
+    color: inherit;
+    background-color: rgba(255, 255, 255, 0.97);
+    background-color: color-mix(in srgb, white 96%, transparent 4%);
+    border-radius: var(--gaenity-radius-md);
+    padding: var(--gaenity-space-lg) clamp(1.5rem, 3vw, 2.5rem);
+    width: min(520px, 92vw);
+    display: grid;
+    gap: var(--gaenity-space-md);
+    position: relative;
+    box-shadow: var(--gaenity-shadow-sm);
+}
+
+.gaenity-modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 0;
+    background: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+body.gaenity-modal-open {
+    overflow: hidden;
+}
+
+.gaenity-inline-list {
+    display: inline-flex;
+    gap: var(--gaenity-space-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gaenity-inline-list a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.gaenity-contact-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gaenity-space-sm);
+    align-items: center;
+}
+
+.gaenity-notice {
+    width: var(--gaenity-max-width);
+    margin: 0 auto var(--gaenity-space-md);
+    padding: var(--gaenity-space-sm) var(--gaenity-space-md);
+    border-radius: var(--gaenity-radius-sm);
+    background: color-mix(in srgb, currentColor 15%, transparent);
+    color: color-mix(in srgb, currentColor 90%, white 10%);
+}
+
+.gaenity-expert-list {
+    display: grid;
+    gap: var(--gaenity-space-sm);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gaenity-expert-card {
+    border: 1px solid var(--gaenity-border-color);
+    border-radius: var(--gaenity-radius-sm);
+    padding: var(--gaenity-space-sm);
+    display: grid;
+    gap: 0.35rem;
+    background: rgba(255, 255, 255, 0.9);
+    background: color-mix(in srgb, currentColor 6%, transparent);
+}
+
+.gaenity-expert-card strong {
+    font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+    .gaenity-section {
+        padding: var(--gaenity-space-md) clamp(1rem, 4vw, 1.5rem);
+    }
+
+    .gaenity-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .gaenity-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
