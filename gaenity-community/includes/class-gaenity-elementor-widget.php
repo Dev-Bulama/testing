@@ -1,6 +1,6 @@
 <?php
 /**
- * Elementor widget for the Gaeinity Community blocks.
+ * Elementor widget for Gaeinity Community Suite.
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -15,7 +15,7 @@ if ( ! class_exists( 'Gaeinity_Community_Elementor_Widget' ) ) :
 class Gaeinity_Community_Elementor_Widget extends Widget_Base {
 
     /**
-     * Plugin instance reference.
+     * Plugin reference.
      *
      * @var Gaeinity_Community_Plugin
      */
@@ -29,22 +29,37 @@ class Gaeinity_Community_Elementor_Widget extends Widget_Base {
         parent::__construct( $data, $args );
     }
 
+    /**
+     * Widget slug.
+     */
     public function get_name() {
-        return 'gaenity-community-block';
+        return 'gaenity_community_widget';
     }
 
+    /**
+     * Widget title.
+     */
     public function get_title() {
         return __( 'Gaeinity Community Block', 'gaenity-community' );
     }
 
+    /**
+     * Widget icon.
+     */
     public function get_icon() {
         return 'eicon-users';
     }
 
+    /**
+     * Widget categories.
+     */
     public function get_categories() {
         return array( 'gaenity-community' );
     }
 
+    /**
+     * Register controls.
+     */
     protected function register_controls() {
         $this->start_controls_section(
             'content_section',
@@ -56,7 +71,7 @@ class Gaeinity_Community_Elementor_Widget extends Widget_Base {
         $this->add_control(
             'block_type',
             array(
-                'label'   => __( 'Block', 'gaenity-community' ),
+                'label'   => __( 'Community block', 'gaenity-community' ),
                 'type'    => Controls_Manager::SELECT,
                 'default' => 'community_home',
                 'options' => array(
@@ -78,12 +93,51 @@ class Gaeinity_Community_Elementor_Widget extends Widget_Base {
         $this->end_controls_section();
     }
 
+    /**
+     * Render widget output.
+     */
     protected function render() {
         $settings = $this->get_settings_for_display();
         $block    = isset( $settings['block_type'] ) ? $settings['block_type'] : 'community_home';
 
-        echo $this->plugin->render_block( $block );
+        switch ( $block ) {
+            case 'resources':
+                echo do_shortcode( '[gaenity_resources]' );
+                break;
+            case 'register':
+                echo do_shortcode( '[gaenity_community_register]' );
+                break;
+            case 'login':
+                echo do_shortcode( '[gaenity_community_login]' );
+                break;
+            case 'discussion_form':
+                echo do_shortcode( '[gaenity_discussion_form]' );
+                break;
+            case 'discussion_board':
+                echo do_shortcode( '[gaenity_discussion_board]' );
+                break;
+            case 'polls':
+                echo do_shortcode( '[gaenity_polls]' );
+                break;
+            case 'expert_request':
+                echo do_shortcode( '[gaenity_expert_request]' );
+                break;
+            case 'expert_register':
+                echo do_shortcode( '[gaenity_expert_register]' );
+                break;
+            case 'contact':
+                echo do_shortcode( '[gaenity_contact]' );
+                break;
+            case 'chat':
+                echo do_shortcode( '[gaenity_community_chat]' );
+                break;
+            case 'community_home':
+            default:
+                echo do_shortcode( '[gaenity_community_home]' );
+                break;
+        }
     }
 }
 
 endif;
+

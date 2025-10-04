@@ -1,246 +1,373 @@
-:root {
-    --gaenity-gap: clamp(1rem, 2vw, 1.75rem);
-    --gaenity-radius: 0.75rem;
+.gaeinity-resources-section,
+.gaeinity-community-home,
+.gaeinity-form,
+.gaeinity-discussion-board,
+.gaeinity-polls,
+.gaeinity-expert-request,
+.gaeinity-expert-register,
+.gaeinity-contact,
+.gaeinity-chat {
+    margin: 2rem 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #1f2933;
 }
 
-.gaeinity-section {
-    margin-block: var(--gaenity-gap);
-    padding: var(--gaenity-gap);
-    border: 1px solid var(--gaenity-border, rgba(0, 0, 0, 0.08));
-    border-radius: var(--gaenity-radius);
-    background-color: var(--gaenity-surface, rgba(255, 255, 255, 0.8));
-    box-shadow: var(--gaenity-shadow, 0 1px 2px rgba(15, 23, 42, 0.05));
+.gaeinity-section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-.gaeinity-section__header {
-    display: grid;
-    gap: 0.5rem;
-    margin-bottom: var(--gaenity-gap);
+.gaeinity-hidden {
+    display: none !important;
 }
 
-.gaeinity-section__title {
-    margin: 0;
-    font-size: clamp(1.5rem, 2vw, 2rem);
+.gaeinity-section-header h2 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
 }
 
-.gaeinity-eyebrow {
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.75rem;
-    color: var(--gaenity-eyebrow, currentColor);
-    opacity: 0.7;
+.gaeinity-section-header p {
+    max-width: 720px;
+    margin: 0 auto 1rem;
 }
 
-.gaeinity-actions {
+.gaeinity-resource-tabs {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.gaeinity-button {
-    display: inline-flex;
-    align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    padding: 0.65rem 1.2rem;
+    gap: .75rem;
+    flex-wrap: wrap;
+}
+
+.gaeinity-resource-tab {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
     border-radius: 999px;
-    border: 1px solid currentColor;
-    background: currentColor;
-    color: var(--gaenity-button-text, #fff);
-    text-decoration: none;
+    padding: .5rem 1.25rem;
     cursor: pointer;
-    transition: opacity 0.2s ease;
-}
-
-.gaeinity-button:hover,
-.gaeinity-button:focus {
-    opacity: 0.85;
-}
-
-.gaeinity-button--outline {
-    background: transparent;
-    color: inherit;
-}
-
-.gaeinity-button--ghost {
-    border-radius: 0.5rem;
-    border: 1px solid currentColor;
-    background: transparent;
-    padding: 0.5rem 1rem;
-}
-
-.gaeinity-grid {
-    display: grid;
-    gap: var(--gaenity-gap);
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.gaeinity-card {
-    padding: 1.25rem;
-    border-radius: var(--gaenity-radius);
-    border: 1px solid var(--gaenity-border, rgba(0, 0, 0, 0.08));
-    background: var(--gaenity-surface-alt, rgba(255, 255, 255, 0.9));
-    display: grid;
-    gap: 0.75rem;
-}
-
-.gaeinity-card__image {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-}
-
-.gaeinity-card__title {
-    margin: 0;
-}
-
-.gaeinity-card__link {
-    justify-self: flex-start;
     font-weight: 600;
 }
 
-.gaeinity-filter-bar {
+.gaeinity-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gaeinity-resource-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
     display: flex;
-    gap: 0.75rem;
-    margin-bottom: var(--gaenity-gap);
-    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.gaeinity-resource-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.gaeinity-resource-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    flex: 1;
+}
+
+.gaeinity-button {
+    background: linear-gradient(135deg, #1d4ed8, #0f172a);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: .65rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gaeinity-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(29, 78, 216, 0.25);
+}
+
+.gaeinity-button.ghost {
+    background: transparent;
+    color: #1d4ed8;
+    border: 2px solid #1d4ed8;
+}
+
+.gaeinity-coming-soon {
+    font-weight: 600;
+    color: #475569;
+}
+
+.gaeinity-empty-state,
+.gaeinity-notice {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    padding: 1.25rem;
+    border-radius: 12px;
+    text-align: center;
 }
 
 .gaeinity-form {
-    display: grid;
-    gap: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+    max-width: 720px;
+}
+
+.gaeinity-form h3 {
+    margin-top: 0;
+}
+
+.gaeinity-form p {
+    margin-bottom: 1rem;
 }
 
 .gaeinity-form label {
-    display: grid;
-    gap: 0.35rem;
+    display: block;
+    font-weight: 600;
+    margin-bottom: .35rem;
 }
 
 .gaeinity-form input,
 .gaeinity-form select,
 .gaeinity-form textarea {
     width: 100%;
-    border-radius: 0.5rem;
-    border: 1px solid var(--gaenity-border, rgba(0, 0, 0, 0.2));
-    padding: 0.6rem 0.75rem;
-    font: inherit;
-    background: var(--gaenity-input-bg, rgba(255, 255, 255, 0.9));
-    color: inherit;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: .6rem .75rem;
+    font-size: 1rem;
+    background: #fff;
 }
 
 .gaeinity-form textarea {
     resize: vertical;
 }
 
-.gaeinity-checkbox,
+.gaeinity-checkbox label {
+    display: flex;
+    gap: .5rem;
+    font-weight: 500;
+}
+
+.gaeinity-form-feedback {
+    min-height: 1.25rem;
+    font-weight: 600;
+}
+
+.gaeinity-community-guidelines {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.gaeinity-community-guidelines ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.gaeinity-columns {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gaeinity-columns h3 {
+    margin-bottom: .5rem;
+}
+
+.gaeinity-forum-structure ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.gaeinity-discussion-board .gaenity-discussion-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.gaeinity-discussion-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    background: #fff;
+}
+
+.gaeinity-discussion-meta {
+    color: #475569;
+    font-size: .875rem;
+    margin-bottom: .5rem;
+}
+
+.gaeinity-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    align-items: flex-end;
+}
+
+.gaeinity-filters label {
+    flex: 1;
+}
+
+.gaeinity-filters select {
+    width: 100%;
+}
+
+.gaeinity-poll {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    background: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.gaeinity-poll-options {
+    display: grid;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
 .gaeinity-radio {
     display: flex;
-    gap: 0.5rem;
-    align-items: flex-start;
+    align-items: center;
+    gap: .5rem;
 }
 
-.gaeinity-checkbox input,
-.gaeinity-radio input {
-    margin-top: 0.2rem;
-}
-
-.gaeinity-list {
-    display: grid;
-    gap: var(--gaenity-gap);
-}
-
-.gaeinity-list__item {
-    border-left: 4px solid currentColor;
-    padding-left: 1rem;
-}
-
-.gaeinity-list__title {
+.gaeinity-poll-results ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
-}
-
-.gaeinity-list__meta {
-    font-size: 0.875rem;
-    opacity: 0.7;
-}
-
-.gaeinity-steps {
     display: grid;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    gap: .75rem;
+}
+
+.gaeinity-poll-results li {
+    position: relative;
+    padding: .5rem .75rem;
+    background: #f1f5f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gaeinity-result-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(29, 78, 216, 0.15);
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.gaeinity-result-label,
+.gaeinity-result-value {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+.gaeinity-mini-process {
+    display: grid;
+    gap: .75rem;
     padding-left: 1.2rem;
 }
 
 .gaeinity-chat {
-    margin-bottom: 1.25rem;
-    border-radius: var(--gaenity-radius);
-    background: var(--gaenity-surface-alt, rgba(255, 255, 255, 0.8));
-    border: 1px solid var(--gaenity-border, rgba(0, 0, 0, 0.08));
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: #fff;
+}
+
+.gaeinity-chat-window {
     max-height: 320px;
-    overflow: auto;
-}
-
-.gaeinity-chat__list {
-    list-style: none;
-    margin: 0;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
     padding: 1rem;
-    display: grid;
-    gap: 0.75rem;
+    margin-bottom: 1rem;
+    background: #f8fafc;
 }
 
-.gaeinity-chat__item {
-    display: grid;
-    gap: 0.35rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.gaeinity-chat__item:last-child {
-    border-bottom: 0;
-}
-
-.gaeinity-chat__meta {
-    display: flex;
-    gap: 0.75rem;
-    font-size: 0.85rem;
-    opacity: 0.75;
-}
-
-.gaeinity-contact-footer {
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.gaeinity-inline-list {
-    display: flex;
-    gap: 0.75rem;
-    padding: 0;
-    margin: 0;
+.gaeinity-chat-messages {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
 }
 
-.gaeinity-inline-list a {
-    text-decoration: underline;
+.gaeinity-chat-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    align-items: center;
+    font-size: .85rem;
+    color: #475569;
 }
 
-.gaeinity-notice {
-    padding: 0.8rem 1rem;
-    border-radius: 0.5rem;
-    background: rgba(16, 185, 129, 0.15);
-    color: inherit;
-    margin-bottom: var(--gaenity-gap);
+.gaeinity-chat-body {
+    background: #fff;
+    border-radius: 8px;
+    padding: .75rem 1rem;
+    border: 1px solid #e2e8f0;
+}
+
+.gaeinity-badge {
+    background: #1d4ed8;
+    color: #fff;
+    padding: .1rem .5rem;
+    border-radius: 999px;
+    font-size: .75rem;
+}
+
+.gaeinity-pagination ul {
+    display: flex;
+    gap: .5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.gaeinity-pagination a,
+.gaeinity-pagination span {
+    display: inline-block;
+    padding: .4rem .75rem;
+    border-radius: 999px;
+    border: 1px solid #cbd5e1;
+}
+
+.gaeinity-pagination .current {
+    background: #1d4ed8;
+    color: #fff;
+    border-color: #1d4ed8;
 }
 
 .gaeinity-modal {
     position: fixed;
     inset: 0;
-    display: grid;
-    place-items: center;
-    background: rgba(15, 23, 42, 0.55);
-    padding: var(--gaenity-gap);
+    background: rgba(15, 23, 42, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
     z-index: 9999;
 }
 
@@ -248,34 +375,32 @@
     display: none;
 }
 
-.gaeinity-modal__dialog {
-    max-width: min(480px, 100%);
+.gaeinity-modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 480px;
     width: 100%;
-    background: var(--gaenity-surface, #fff);
-    color: inherit;
-    border-radius: var(--gaenity-radius);
-    padding: clamp(1.5rem, 2vw, 2rem);
     position: relative;
-    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.35);
 }
 
-.gaeinity-modal__close {
+.gaeinity-modal-close {
     position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    border: 0;
+    top: .75rem;
+    right: .75rem;
     background: transparent;
+    border: none;
     font-size: 1.5rem;
-    line-height: 1;
     cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-    .gaenity-section,
-    .gaenity-card,
-    .gaenity-chat,
-    .gaenity-modal__dialog {
-        background-color: rgba(30, 41, 59, 0.8);
-        border-color: rgba(148, 163, 184, 0.3);
+@media (max-width: 600px) {
+    .gaenity-form {
+        padding: 1rem;
+    }
+
+    .gaenity-filters {
+        flex-direction: column;
+        align-items: stretch;
     }
 }
