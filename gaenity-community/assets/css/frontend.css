@@ -1,0 +1,281 @@
+:root {
+    --gaenity-gap: clamp(1rem, 2vw, 1.75rem);
+    --gaenity-radius: 0.75rem;
+}
+
+.gaeinity-section {
+    margin-block: var(--gaenity-gap);
+    padding: var(--gaenity-gap);
+    border: 1px solid var(--gaenity-border, rgba(0, 0, 0, 0.08));
+    border-radius: var(--gaenity-radius);
+    background-color: var(--gaenity-surface, rgba(255, 255, 255, 0.8));
+    box-shadow: var(--gaenity-shadow, 0 1px 2px rgba(15, 23, 42, 0.05));
+}
+
+.gaeinity-section__header {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: var(--gaenity-gap);
+}
+
+.gaeinity-section__title {
+    margin: 0;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.gaeinity-eyebrow {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    color: var(--gaenity-eyebrow, currentColor);
+    opacity: 0.7;
+}
+
+.gaeinity-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.gaeinity-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid currentColor;
+    background: currentColor;
+    color: var(--gaenity-button-text, #fff);
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.gaeinity-button:hover,
+.gaeinity-button:focus {
+    opacity: 0.85;
+}
+
+.gaeinity-button--outline {
+    background: transparent;
+    color: inherit;
+}
+
+.gaeinity-button--ghost {
+    border-radius: 0.5rem;
+    border: 1px solid currentColor;
+    background: transparent;
+    padding: 0.5rem 1rem;
+}
+
+.gaeinity-grid {
+    display: grid;
+    gap: var(--gaenity-gap);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gaeinity-card {
+    padding: 1.25rem;
+    border-radius: var(--gaenity-radius);
+    border: 1px solid var(--gaenity-border, rgba(0, 0, 0, 0.08));
+    background: var(--gaenity-surface-alt, rgba(255, 255, 255, 0.9));
+    display: grid;
+    gap: 0.75rem;
+}
+
+.gaeinity-card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.gaeinity-card__title {
+    margin: 0;
+}
+
+.gaeinity-card__link {
+    justify-self: flex-start;
+    font-weight: 600;
+}
+
+.gaeinity-filter-bar {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: var(--gaenity-gap);
+    flex-wrap: wrap;
+}
+
+.gaeinity-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.gaeinity-form label {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.gaeinity-form input,
+.gaeinity-form select,
+.gaeinity-form textarea {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gaenity-border, rgba(0, 0, 0, 0.2));
+    padding: 0.6rem 0.75rem;
+    font: inherit;
+    background: var(--gaenity-input-bg, rgba(255, 255, 255, 0.9));
+    color: inherit;
+}
+
+.gaeinity-form textarea {
+    resize: vertical;
+}
+
+.gaeinity-checkbox,
+.gaeinity-radio {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.gaeinity-checkbox input,
+.gaeinity-radio input {
+    margin-top: 0.2rem;
+}
+
+.gaeinity-list {
+    display: grid;
+    gap: var(--gaenity-gap);
+}
+
+.gaeinity-list__item {
+    border-left: 4px solid currentColor;
+    padding-left: 1rem;
+}
+
+.gaeinity-list__title {
+    margin: 0;
+}
+
+.gaeinity-list__meta {
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+.gaeinity-steps {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.2rem;
+}
+
+.gaeinity-chat {
+    margin-bottom: 1.25rem;
+    border-radius: var(--gaenity-radius);
+    background: var(--gaenity-surface-alt, rgba(255, 255, 255, 0.8));
+    border: 1px solid var(--gaenity-border, rgba(0, 0, 0, 0.08));
+    max-height: 320px;
+    overflow: auto;
+}
+
+.gaeinity-chat__list {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.gaeinity-chat__item {
+    display: grid;
+    gap: 0.35rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.gaeinity-chat__item:last-child {
+    border-bottom: 0;
+}
+
+.gaeinity-chat__meta {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+.gaeinity-contact-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.gaeinity-inline-list {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.gaeinity-inline-list a {
+    text-decoration: underline;
+}
+
+.gaeinity-notice {
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    background: rgba(16, 185, 129, 0.15);
+    color: inherit;
+    margin-bottom: var(--gaenity-gap);
+}
+
+.gaeinity-modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(15, 23, 42, 0.55);
+    padding: var(--gaenity-gap);
+    z-index: 9999;
+}
+
+.gaeinity-modal[hidden] {
+    display: none;
+}
+
+.gaeinity-modal__dialog {
+    max-width: min(480px, 100%);
+    width: 100%;
+    background: var(--gaenity-surface, #fff);
+    color: inherit;
+    border-radius: var(--gaenity-radius);
+    padding: clamp(1.5rem, 2vw, 2rem);
+    position: relative;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.35);
+}
+
+.gaeinity-modal__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    border: 0;
+    background: transparent;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+    .gaenity-section,
+    .gaenity-card,
+    .gaenity-chat,
+    .gaenity-modal__dialog {
+        background-color: rgba(30, 41, 59, 0.8);
+        border-color: rgba(148, 163, 184, 0.3);
+    }
+}
