@@ -1,61 +1,70 @@
-# Gaenity Support Hub
+# Gaeinity Community Suite
 
-Elegant, one-page community hub for Gaenity entrepreneurs and experts. The plugin delivers a polished landing experience with resource highlights, curated discussions, polls, chat, and onboarding forms—all available through shortcodes or an Elementor widget. Styling inherits the active theme while layering refined layout enhancements.
+Gaeinity Community Suite is a multipurpose community plugin that brings together resources, forums, polls, live chat, and expert matchmaking for entrepreneurs. The plugin is designed to inherit the active theme's typography and colours so it feels native to any site while supplying powerful community workflows out of the box.
 
 ## Requirements
 
-- WordPress 6.1 or newer (tested up to 6.5)
+- WordPress 5.8 or newer (tested up to WordPress 6.4)
 - PHP 7.4 or newer
-- Elementor (optional) 3.7+ for the bundled widget
+- Elementor 3.0+ (optional – for the bundled widget)
 
-## Installation
+## Getting Started
 
-1. Upload the `gaenity-community` directory to `wp-content/plugins/` or install it via the WordPress plugin uploader.
-2. Activate **Gaenity Support Hub**. The plugin automatically creates a “Gaenity Support Hub” page containing the main shortcode.
-3. Adjust the content or move the `[gaenity_support_hub]` shortcode to any page or Elementor template as needed.
+1. Upload the `gaenity-community` folder to your WordPress installation's `/wp-content/plugins/` directory or install it as a zip via **Plugins → Add New → Upload Plugin**.
+2. Activate **Gaeinity Community Suite**. During activation the plugin seeds three example resources, two example discussions, and publishes a "Gaeinity Community" landing page populated with the core shortcodes. All demo content can be edited or removed like any other WordPress post.
+3. Visit **Pages → Gaeinity Community** to review the starter layout. Edit it in the Block Editor, Classic Editor, or Elementor by swapping shortcodes, removing sections, or adding your own content.
+4. Add additional pages or templates using the shortcodes below to embed specific sections anywhere on your site.
 
 ## Shortcodes
 
+The plugin registers a router shortcode and individual helpers for each feature. All shortcodes automatically enqueue the front-end assets and will match your active theme styles.
+
 | Shortcode | Purpose |
 | --- | --- |
-| `[gaenity_support_hub]` | Full one-page experience containing hero, discussions, resources, polls, experts, registration, login, chat, and contact sections. |
-| `[gaenity_community block="community_home"]` | Outputs only the community discovery section with tabs and featured discussions. |
-| `[gaenity_register]` | Displays the registration form with demo select options. |
-| `[gaenity_login]` | Renders the sign-in form. |
-| `[gaenity_chat]` | Renders the demo chat feed and quick post form. |
+| `[gaenity_community block="community_home"]` | Intro hero with key calls-to-action and feature highlights. |
+| `[gaenity_community block="resources"]` or `[gaenity_resources]` | Resource grid with download modal. |
+| `[gaenity_community block="register"]` or `[gaenity_register]` | Community registration form. |
+| `[gaenity_community block="login"]` or `[gaenity_login]` | Lightweight login form that respects WordPress authentication. |
+| `[gaenity_community block="discussion_form"]` or `[gaenity_discussion_form]` | Member discussion submission form with industry, region, and challenge filters. |
+| `[gaenity_community block="discussion_board"]` or `[gaenity_discussion_board]` | Recent discussions list pulled from the `gaenity_discussion` post type. |
+| `[gaenity_community block="polls"]` or `[gaenity_polls]` | Monthly benchmark poll with member-only voting. |
+| `[gaenity_community block="expert_request"]` or `[gaenity_expert_request]` | "Ask an Expert" request form. |
+| `[gaenity_community block="expert_register"]` or `[gaenity_expert_register]` | Expert registration workflow. |
+| `[gaenity_community block="contact"]` or `[gaenity_contact]` | Contact form with marketing opt-in. |
+| `[gaenity_community block="chat"]` or `[gaenity_chat]` | Lightweight community chat stream backed by private submissions. |
 
-Each shortcode automatically loads the curated styles (`assets/css/support-hub.css`) and interactivity (`assets/js/support-hub.js`).
+The router shortcode defaults to the community home block when no `block` attribute is provided.
 
-## Elementor
+## Elementor Widget
 
-After activating the plugin, search for **Gaenity Support Hub** within Elementor’s widget panel. Drag it onto a layout to render the full shortcode without additional configuration. The widget simply wraps the `[gaenity_support_hub]` shortcode so all settings remain centralised.
+The plugin adds a **Gaeinity Community Block** Elementor widget located under the "Gaeinity Community" category. Drop the widget into any Elementor layout and choose the block you would like to display from the dropdown. The widget uses the same rendering pipeline as the shortcodes so Elementor previews will match front-end output.
 
-## Demo Content
+## Theme Styling
 
-The plugin seeds polished placeholder data so that every section feels alive immediately after activation:
+Front-end CSS focuses on spacing and layout only. All typography inherits the active theme, so headings, buttons, and form controls automatically match global styles. If you need to override colours or spacing further, enqueue your own stylesheet and target the `.gaenity-*` class names.
 
-- Five featured discussions spanning multiple regions and focus areas
-- Five downloadable resource summaries
-- Five highlighted experts with focus tags and action buttons
-- Three live poll cards with percentage breakdowns
-- Five recent chat messages (including anonymous contributors)
+## Forms and Data
 
-Edit any copy by overriding the shortcode output or replacing the auto-created page with your own Elementor design.
-
-## Styling
-
-The CSS keeps typography and global colours inherited from the current theme. Utility custom properties provide subtle shadows, rounded corners, and responsive spacing. Feel free to override the `.gaenity-support-hub` selectors in your theme or child-theme stylesheet for bespoke branding.
+All forms submit via WordPress' `admin-post.php` endpoint and create private entries under the **Community Entries** post type. Administrators can view submissions in the dashboard and export them if needed. Discussion submissions are stored separately as pending `gaenity_discussion` posts so moderators can publish them after review.
 
 ## Troubleshooting
 
-- **Missing styling** – Ensure the theme calls `wp_head()` and `wp_footer()` so the enqueued assets load. The plugin defers CSS/JS until a shortcode or the Elementor widget renders.
-- **Duplicate landing page** – Delete or unpublish the generated page and place the shortcode on your desired page.
-- **Elementor widget not visible** – Confirm Elementor is active, then use the search bar to locate “Gaenity Support Hub” under the *General* category.
+- **Elementor preview shows a 500 error**: Ensure you are running Elementor 3.0 or newer. The plugin automatically detects whether Elementor expects the modern `register()` API or the legacy `register_widget_type()` method to keep compatibility with older releases. Clear any server-side caching and try again.
+- **Shortcodes output raw text**: Confirm the plugin is activated and that you are using straight quotes in the shortcode syntax.
+- **Seed content keeps reappearing**: Remove the `gaenity_community_seeded` option from **Tools → Site Health → Debug** or via `wp option delete gaenity_community_seeded` if you want the demo content to be generated again.
 
 ## Changelog
 
-### 3.0.0
-- Rebuilt the plugin as a single-page support experience with refreshed shortcodes
-- Added professional, responsive styling that inherits theme typography
-- Bundled Elementor widget wrapper and automatic page seeding
-- Populated demo discussions, resources, experts, polls, and chat feed for immediate context
+### 2.1.0
+- Added activation seeding for resources, discussions, and a starter landing page.
+- Documented all shortcodes and Elementor usage in this README.
+- Improved Elementor widget registration for backward compatibility.
+- Added resilient date formatting for stored submissions.
+
+### 2.0.0
+- Introduced shortcode-based architecture for every community feature.
+- Added Elementor widget integration and front-end assets.
+
+## License
+
+This project is provided as-is for the Gaenity community initiative. You are free to customise and extend it within your WordPress installation.
