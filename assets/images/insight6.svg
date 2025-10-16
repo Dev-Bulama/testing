@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Case study illustration</title>
+  <desc id="desc">Stacked rectangles symbolizing structured insights.</desc>
+  <defs>
+    <linearGradient id="insightGradient6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16161b" />
+      <stop offset="100%" stop-color="#ff4d54" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="28" fill="url(#insightGradient6)" />
+  <rect x="120" y="120" width="400" height="40" rx="12" fill="#ffffff" fill-opacity="0.3" />
+  <rect x="160" y="200" width="360" height="40" rx="12" fill="#ffffff" fill-opacity="0.4" />
+  <rect x="200" y="280" width="280" height="40" rx="12" fill="#ffffff" fill-opacity="0.35" />
+</svg>

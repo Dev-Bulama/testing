@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Insight card illustration</title>
+  <desc id="desc">Abstract shapes with TekGurus colors representing insights.</desc>
+  <defs>
+    <linearGradient id="insightGradient1" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#101014" />
+      <stop offset="100%" stop-color="#e5252a" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="28" fill="url(#insightGradient1)" />
+  <path d="M80 320 C160 260, 240 340, 320 280 S480 220, 560 300" stroke="#ffffff" stroke-opacity="0.4" stroke-width="8" fill="none" stroke-linecap="round" />
+  <circle cx="160" cy="180" r="36" fill="#ffffff" fill-opacity="0.65" />
+  <circle cx="440" cy="150" r="52" fill="#ffffff" fill-opacity="0.35" />
+</svg>
