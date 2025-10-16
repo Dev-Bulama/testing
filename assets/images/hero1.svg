@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract cloud technology background</title>
+  <desc id="desc">A vibrant gradient background with connected nodes suggesting cloud technology.</desc>
+  <defs>
+    <linearGradient id="hero1Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0b0f" />
+      <stop offset="50%" stop-color="#1a1f3b" />
+      <stop offset="100%" stop-color="#e5252a" />
+    </linearGradient>
+    <radialGradient id="hero1Glow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#hero1Gradient)" />
+  <circle cx="720" cy="420" r="420" fill="url(#hero1Glow)" />
+  <g stroke="#ffffff" stroke-opacity="0.3" stroke-width="2" fill="none">
+    <path d="M160 260 C400 160, 560 620, 840 520 S1240 280, 1320 620" />
+    <path d="M120 600 C360 760, 640 340, 900 480 S1200 740, 1380 540" />
+  </g>
+  <g fill="#ffffff" fill-opacity="0.65">
+    <circle cx="220" cy="300" r="12" />
+    <circle cx="420" cy="210" r="10" />
+    <circle cx="640" cy="600" r="14" />
+    <circle cx="940" cy="500" r="12" />
+    <circle cx="1200" cy="360" r="10" />
+    <circle cx="1080" cy="640" r="9" />
+  </g>
+</svg>

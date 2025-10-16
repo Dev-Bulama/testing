@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-labelledby="title desc">
+  <title id="title">AWS alliance mark</title>
+  <desc id="desc">Simplified AWS inspired wordmark for placeholder use.</desc>
+  <rect width="240" height="120" rx="16" fill="#121212" />
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="'Poppins', 'Arial', sans-serif" font-size="48" fill="#ffffff">AWS</text>
+  <path d="M50 90 C90 110, 150 110, 190 90" stroke="#e5252a" stroke-width="6" fill="none" stroke-linecap="round" />
+</svg>

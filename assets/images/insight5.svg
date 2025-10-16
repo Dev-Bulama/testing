@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Case study illustration</title>
+  <desc id="desc">Diagonal gradient blocks symbolizing growth.</desc>
+  <defs>
+    <linearGradient id="insightGradient5" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#15151b" />
+      <stop offset="100%" stop-color="#e5252a" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="28" fill="url(#insightGradient5)" />
+  <path d="M40 280 L200 200 L320 300 L480 200 L600 260" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-opacity="0.35" />
+  <circle cx="200" cy="200" r="18" fill="#ffffff" fill-opacity="0.6" />
+  <circle cx="320" cy="300" r="20" fill="#ffffff" fill-opacity="0.45" />
+  <circle cx="480" cy="200" r="18" fill="#ffffff" fill-opacity="0.6" />
+</svg>

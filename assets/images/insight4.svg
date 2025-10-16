@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Case study illustration</title>
+  <desc id="desc">Layered shapes showing transformation paths.</desc>
+  <defs>
+    <linearGradient id="insightGradient4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#121219" />
+      <stop offset="100%" stop-color="#ef3a40" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="28" fill="url(#insightGradient4)" />
+  <path d="M80 320 L200 200 L320 320 L440 200 L560 320" stroke="#ffffff" stroke-opacity="0.35" stroke-width="12" fill="none" stroke-linecap="round" />
+  <rect x="120" y="120" width="160" height="80" rx="18" fill="#ffffff" fill-opacity="0.22" />
+  <rect x="360" y="160" width="160" height="80" rx="18" fill="#ffffff" fill-opacity="0.18" />
+</svg>

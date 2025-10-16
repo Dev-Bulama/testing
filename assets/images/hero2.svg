@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Digital mesh background</title>
+  <desc id="desc">Dark background with red accents and circuit-inspired mesh.</desc>
+  <defs>
+    <linearGradient id="hero2Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#040404" />
+      <stop offset="50%" stop-color="#111723" />
+      <stop offset="100%" stop-color="#e5252a" />
+    </linearGradient>
+    <linearGradient id="hero2Lines" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#hero2Gradient)" />
+  <g stroke="url(#hero2Lines)" stroke-width="1.5" fill="none">
+    <path d="M120 160 L340 320 L540 200 L760 340 L980 220 L1200 360 L1380 240" />
+    <path d="M120 420 L320 540 L520 420 L720 560 L940 440 L1140 560 L1360 440" />
+    <path d="M120 700 L360 820 L560 700 L780 820 L1000 700 L1200 820 L1380 700" />
+  </g>
+  <g fill="#ffffff" fill-opacity="0.55">
+    <circle cx="340" cy="320" r="12" />
+    <circle cx="540" cy="200" r="9" />
+    <circle cx="760" cy="340" r="11" />
+    <circle cx="980" cy="220" r="10" />
+    <circle cx="1140" cy="560" r="9" />
+    <circle cx="360" cy="820" r="10" />
+    <circle cx="780" cy="820" r="12" />
+  </g>
+</svg>
