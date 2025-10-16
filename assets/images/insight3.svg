@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Insight card illustration</title>
+  <desc id="desc">Network of nodes over a gradient background.</desc>
+  <defs>
+    <linearGradient id="insightGradient3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f0f11" />
+      <stop offset="100%" stop-color="#d92d31" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="28" fill="url(#insightGradient3)" />
+  <g stroke="#ffffff" stroke-opacity="0.3" stroke-width="3" fill="none">
+    <path d="M100 120 L220 200 L340 120 L460 200 L580 120" />
+    <path d="M100 280 L220 200 L340 280 L460 200 L580 280" />
+  </g>
+  <g fill="#ffffff" fill-opacity="0.6">
+    <circle cx="100" cy="120" r="12" />
+    <circle cx="220" cy="200" r="10" />
+    <circle cx="340" cy="120" r="12" />
+    <circle cx="460" cy="200" r="10" />
+    <circle cx="580" cy="120" r="12" />
+  </g>
+</svg>

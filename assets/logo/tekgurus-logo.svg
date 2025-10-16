@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">TekGurus logomark</title>
+  <desc id="desc">Stylized TG monogram in TekGurus colors.</desc>
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e5252a" />
+      <stop offset="100%" stop-color="#7d1012" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="36" fill="#0d0d10" />
+  <g fill="none" stroke="url(#logoGradient)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M60 70 H140" />
+    <path d="M60 70 V140 C60 160 80 160 100 140" />
+    <path d="M120 70 V140 H150" />
+  </g>
+  <circle cx="160" cy="50" r="12" fill="#ffffff" />
+</svg>

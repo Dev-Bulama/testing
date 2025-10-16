@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait placeholder</title>
+  <desc id="desc">Abstract portrait illustration with warm gradient.</desc>
+  <defs>
+    <linearGradient id="portraitGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#26262b" />
+      <stop offset="100%" stop-color="#f0464c" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="480" rx="32" fill="url(#portraitGradient3)" />
+  <circle cx="200" cy="180" r="88" fill="#ffffff" fill-opacity="0.9" />
+  <rect x="120" y="260" width="160" height="150" rx="44" fill="#ffffff" fill-opacity="0.8" />
+  <path d="M120 340 Q200 410 280 340" fill="#e5252a" fill-opacity="0.45" />
+</svg>

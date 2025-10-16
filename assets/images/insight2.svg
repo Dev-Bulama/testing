@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Insight card illustration</title>
+  <desc id="desc">Diagonal blocks with red and black gradient.</desc>
+  <defs>
+    <linearGradient id="insightGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181c" />
+      <stop offset="100%" stop-color="#f23d42" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="28" fill="url(#insightGradient2)" />
+  <path d="M0 280 L220 120 L420 280 L640 120 V400 H0 Z" fill="#ffffff" fill-opacity="0.12" />
+  <circle cx="520" cy="280" r="40" fill="#ffffff" fill-opacity="0.5" />
+  <circle cx="200" cy="140" r="26" fill="#ffffff" fill-opacity="0.35" />
+</svg>
