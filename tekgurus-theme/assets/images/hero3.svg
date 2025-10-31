@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Modern data visualization background</title>
+  <desc id="desc">Stylized bars and nodes representing analytics over a dark gradient.</desc>
+  <defs>
+    <linearGradient id="hero3Gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#050608" />
+      <stop offset="50%" stop-color="#141b2e" />
+      <stop offset="100%" stop-color="#e5252a" />
+    </linearGradient>
+    <linearGradient id="hero3Bars" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.35" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#hero3Gradient)" />
+  <g fill="url(#hero3Bars)">
+    <rect x="160" y="460" width="80" height="260" rx="12" />
+    <rect x="300" y="380" width="80" height="340" rx="12" />
+    <rect x="440" y="420" width="80" height="300" rx="12" />
+    <rect x="580" y="340" width="80" height="380" rx="12" />
+    <rect x="720" y="400" width="80" height="320" rx="12" />
+    <rect x="860" y="360" width="80" height="360" rx="12" />
+    <rect x="1000" y="420" width="80" height="300" rx="12" />
+    <rect x="1140" y="480" width="80" height="240" rx="12" />
+  </g>
+  <g fill="#ffffff" fill-opacity="0.55">
+    <circle cx="200" cy="440" r="10" />
+    <circle cx="340" cy="360" r="12" />
+    <circle cx="480" cy="400" r="9" />
+    <circle cx="620" cy="320" r="12" />
+    <circle cx="760" cy="380" r="9" />
+    <circle cx="900" cy="340" r="11" />
+    <circle cx="1040" cy="400" r="9" />
+    <circle cx="1180" cy="460" r="10" />
+  </g>
+</svg>
