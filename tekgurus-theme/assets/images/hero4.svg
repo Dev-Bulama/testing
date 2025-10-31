@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Futuristic grid background</title>
+  <desc id="desc">Red-tinted grid with waveforms representing innovation.</desc>
+  <defs>
+    <linearGradient id="hero4Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18191f" />
+      <stop offset="40%" stop-color="#111112" />
+      <stop offset="100%" stop-color="#e5252a" />
+    </linearGradient>
+    <linearGradient id="hero4Wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#hero4Gradient)" />
+  <g stroke="#ffffff" stroke-opacity="0.07" stroke-width="2">
+    <path d="M0 760 H1440" />
+    <path d="M0 680 H1440" />
+    <path d="M0 600 H1440" />
+    <path d="M0 520 H1440" />
+    <path d="M0 440 H1440" />
+    <path d="M0 360 H1440" />
+    <path d="M0 280 H1440" />
+    <path d="M0 200 H1440" />
+  </g>
+  <path d="M0 620 C200 520, 400 700, 600 620 S1000 500, 1200 620 S1400 520, 1440 600" fill="none" stroke="url(#hero4Wave)" stroke-width="6" />
+  <g fill="#ffffff" fill-opacity="0.6">
+    <circle cx="180" cy="620" r="10" />
+    <circle cx="420" cy="700" r="8" />
+    <circle cx="660" cy="610" r="11" />
+    <circle cx="900" cy="520" r="9" />
+    <circle cx="1140" cy="640" r="10" />
+  </g>
+</svg>

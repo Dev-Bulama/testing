@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-labelledby="title desc">
+  <title id="title">TekGurus alliance badge</title>
+  <desc id="desc">TekGurus lettering over a red underline.</desc>
+  <rect width="240" height="120" rx="16" fill="#080809" />
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="'Poppins', 'Arial', sans-serif" font-size="32" fill="#ffffff">TekGurus</text>
+  <rect x="60" y="78" width="120" height="8" rx="4" fill="#e5252a" />
+</svg>
